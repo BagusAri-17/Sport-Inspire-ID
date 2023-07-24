@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import Image1 from '../assets/logo.svg'
+import Image1 from '../assets/Logo.svg'
 import { AiFillInstagram, AiFillYoutube, AiFillMail } from 'react-icons/ai'
 
 import AOS from 'aos';
