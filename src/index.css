@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-poppins bg-[#F6F8FD]
+}
+
+/* NAVBAR */
+.navbar-fixed {
+  @apply fixed z-[9999] bg-secondary bg-opacity-80 backdrop-blur-md;
+  box-shadow: inset 0 -1px 00 rgba(0, 0, 0, 0.1);
+}
+
+
+/* KEYFRAMES & ANIMATION */
+@keyframes slideVer1 {
+  0% {
+    transform: translateY(0);
+  } 25% {
+    transform: translateY(calc(-20%))
+  } 50% {
+    transform: translateY(0);
+  } 75% {
+    transform: translateY(calc(20%));
+  } 100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideVer2 {
+  0% {
+    transform: translateY(0);
+  } 25% {
+    transform: translateY(calc(20%))
+  } 50% {
+    transform: translateY(0);
+  } 75% {
+    transform: translateY(calc(-20%));
+  } 100% {
+    transform: translateY(0);
+  }
+}
+
+.slide-ver-1 {
+  animation: slideVer1 10s linear infinite;
+}
+
+.slide-ver-2 {
+  animation: slideVer2 10s linear infinite;
+}
+
+
+/* BACKGROUND COVER ON BLOG SECTION */
+.res-pattern {
+  background: url('/src/assets/blog/blog-cover.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+
+/* BLOG DESC */
+.blog-desc {
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
